@@ -1,0 +1,355 @@
+/* Reseteo básico de márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo */
+body {
+   
+    line-height: 1.6;
+    color: #333;
+    background-color:#E5E5E5 ;
+   text-align: center;
+   padding: 10px;
+   border: 10px;
+}
+
+/* Estilo del encabezado */
+header {
+    background:E8E8E8;
+   
+    padding: 1rem 0;
+    text-align: start;
+}
+/* Encriptador */
+.letras.minusculas {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0; /* Margen superior e inferior */
+    
+}
+.letras.minusculas img {
+    width: 24px; /* Ajusta el tamaño del icono */
+    height: 24px;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.letras.minusculas h1 {
+    font-size: 18px;
+    margin: 0; /* Elimina margen del encabezado */
+    font-weight: normal; /* Ajusta el peso de la fuente */
+}
+.container {
+    position: fixed;
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    height: 75%;
+    gap: 50px;
+    padding: 20px;
+    margin-left: 300px;
+    background-color:#E5E5E5  ;
+    
+}
+
+.left-column, .right-column {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color:#E5E5E5  ;
+   margin-left: 15px;
+  
+}
+.right-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   border-radius: 24px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+  
+}
+
+p#resultText1.desaparece{
+    font-size: 34px;
+    color: black;
+    font-family: 'Inter';
+    font-weight: bold;
+}
+p#resultText2.desaparece{
+    font-size: 16px;
+    color: black;
+    font-family: 'Inter';
+    
+}
+#inputText::placeholder {
+    color: darkblue;
+    font-family: 'Inter';
+}
+.right-column img,
+.right-column p {
+    display: block; /* Oculta por defecto */
+    
+}
+
+.right-column button {
+   margin-top: auto;
+   display: none;
+}
+
+textarea {
+    width: 100%; /* Asegura que el área de texto ocupe todo el ancho disponible */
+    height: 80%; /* Ajusta la altura en relación con el contenedor padre */
+    padding: 10px; /* Espacio interno para el texto */
+    border: none;
+    
+    resize: none; /* Evita que el usuario pueda cambiar el tamaño del área de texto */
+    display: block; /* Asegura que el área de texto se muestre como un bloque */
+    cursor: text; /* Muestra un cursor de texto cuando se pasa sobre el área de texto */
+    color: darkblue;
+    font-family: 'Inter';
+    font-size: 32PX;
+   
+}
+textarea#outputText{
+    background-color: white;
+    color: black;
+    outline: none;
+    
+   
+}
+textarea#inputText{
+    background-color:#E5E5E5  ;
+    border: none;
+    outline: none;
+    cursor: default;
+   
+}
+/* Estilo para los botones */
+button {
+    cursor: pointer; /* Muestra un cursor de puntero cuando se pasa sobre el botón */
+    margin: 5px; /* Espacio alrededor del botón */
+    padding: 10px 34px; /* Espacio interno del botón */
+    border: 2px solid darkblue;
+    border-radius: 24px; /* Bordes muy redondeados */
+    background-color:#E5E5E5 ; /* Color de fondo del botón */
+    color: darkblue; /* Color del texto del botón */
+    font-size: 16px; /* Tamaño del texto en el botón */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background-color: darkblue;
+    color: #fff;
+    transform: scale(1.2);
+}
+
+/* Estilo del pie de página */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin-left: -326px;
+    gap: 20px;
+   
+}
+
+
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centra los iconos horizontalmente */
+    gap: 15px; /* Espacio entre los iconos */
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+   
+    border-radius: 90%;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    box-shadow: 3px 3px 8px hsla(300, 1%, 72%, 0.986);
+}
+.social-icons p{
+    font-size: 34px;
+}
+
+
+@media (max-width: 1459px){
+    .container{
+        margin-left: 150px;
+
+    }
+    footer{
+        margin-left: -178px;
+    }
+}
+/* tablet */
+@media (max-width: 1028px) {
+    .container {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        width: 95%;
+        height: 30%;
+        margin-left: 0px;
+        gap: 80px;
+    }
+    footer{
+        margin-left: -30px
+    }
+    .right-column img {
+        display: none; /* Oculta la imagen en pantallas pequeñas */
+    }
+    
+  }
+
+
+
+
+
+/* celular */
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Make the container wider on very small screens */
+        height: 21%;
+        margin-left: 0px;
+        
+    }
+
+    button {
+        font-size: 12px; /* Adjust button text size */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+
+    textarea {
+        height: 120px; /* Further adjust textarea height */
+        font-size: 15px;
+    }
+    footer{
+        margin-left: -26px;
+        font-size: 10px;
+        
+    }
+    .social-icons p{
+        font-size: 20px;
+    }
+    .right-column img {
+        display: none; /* Oculta la imagen en tabletas */
+    }
+    .letras.minusculas{
+        font-size: 10px;
+    }
+   
+    p#resultText1.desaparece{
+        font-size: 12PX;
+    }
+    P#resultText2.desaparece{
+        font-size:10PX ;
+    }
+    #inputText::placeholder {
+      
+        font-size: 15px;
+     }
+}
+
+@media (max-width: 210px) {
+    .container {
+        width: 95%; /* Make the container wider on very small screens */
+        margin-left: 0%;
+       
+    }
+    .letras.minusculas{
+        font-size: 10px;
+    }
+    .letras.minusculas img{
+        width: 10px;
+        height: 10px;
+      margin-left: -10px;
+    }
+    button {
+        font-size: 10px; /* Adjust button text size */
+        padding: 8px 12px; /* Adjust button padding */
+    }
+
+    textarea {
+        height: 120px; /* Further adjust textarea height */
+        font-size: 10px;
+    }
+    footer{
+        margin-left: -25px;
+    }
+    .right-column img {
+        display: none; /* Oculta la imagen en tabletas */
+    }
+    p#resultText1.desaparece{
+        font-size: 10PX;
+    }
+    P#resultText2.desaparece{
+        font-size:7PX ;
+    }
+    #inputText::placeholder {
+      
+        font-size: 15px;
+     }
+     .social-icons p{
+        font-size: 15px;
+    }
+    .social-icons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+}
+@media (max-width: 180px) {
+    .container {
+        width: 80%; /* Make the container wider on very small screens */
+        margin-left: -25px;
+       
+    }.letras.minusculas{
+        font-size: 5px;
+    }
+    .letras.minusculas img{
+        width: 10px;
+        height: 10px;
+      margin-left: -10px;
+    }
+    button {
+        font-size: 5px; /* Adjust button text size */
+        padding: 8px 12px; /* Adjust button padding */
+    }
+
+    textarea {
+        height: 110px; /* Further adjust textarea height */
+    }
+    footer{
+        margin-left: -10px;
+    }
+    .left-column, .right-column{
+        width: 120%;
+    }
+    .right-column img {
+        display: none; /* Oculta la imagen en tabletas */
+    }
+    p#resultText1.desaparece{
+        font-size: 5PX;
+    }
+    P#resultText2.desaparece{
+        font-size:3PX ;
+    }
+    #inputText::placeholder {
+      
+        font-size: 10px;
+     }
+    
+}
